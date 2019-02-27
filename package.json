@@ -1,0 +1,44 @@
+{
+  "name": "@ao-framework/exceptions",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "doc": "typedoc --out docs src --theme markdown"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.0",
+    "@types/node": "^10.12.12",
+    "jest": "^22.4.2",
+    "typedoc": "^0.14.2",
+    "typedoc-plugin-markdown": "^1.1.26",
+    "typescript": "^2.7.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "dist/src/**/*.js",
+      "!**dist/src/interface/**"
+    ],
+    "verbose": true,
+    "testURL": "http://localhost/"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ao-framework/exceptions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ao-framework/exceptions/issues"
+  },
+  "homepage": "https://github.com/ao-framework/exceptions#readme"
+}
