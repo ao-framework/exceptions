@@ -1,5 +1,8 @@
-import { ExceptionGroup } from "./exception.group";
+import Exception from "./exception"
+import ExceptionData from "./exception.data";
 
-export default ExceptionGroup;
+export {
+    ExceptionData
+}
 
-
+export default Exception
