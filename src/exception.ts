@@ -2,11 +2,7 @@ import Writer from "@ao-framework/writer";
 import { TagInterface } from "./interfaces/tag.interface";
 import ExceptionData from "./exception.data";
 
-/**
- * Definition of an Exception
- */
 export default class Exception extends Error {
-
     /**
      * Holds the instance of the exception data
      */
