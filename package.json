@@ -7,7 +7,7 @@
     "test": "jest",
     "dev": "tsc --watch",
     "build": "tsc",
-    "doc": "typedoc --out docs src"
+    "doc": "typedoc --out docs src && touch docs/.nojekyll"
   },
   "devDependencies": {
     "@types/jest": "^22.2.0",
