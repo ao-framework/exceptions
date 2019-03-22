@@ -1,20 +1,19 @@
 {
   "name": "@ao-framework/exceptions",
   "version": "0.0.1",
-  "description": "",
+  "description": "Exceptions is a library for managing custom exceptions. It contains functionality to tag additional information about context that ultimately led to an exception to be thrown in the first place. Errors in Javascript contains the “toString” method that usually contains the message, type and stack information from the Error. Exceptions contains two methods for viewing --“toString” and “toJson”. Both have their respected template methods to alter their view to the end user for a more detailed debugging experience.",
   "main": "index.js",
   "scripts": {
     "test": "jest",
     "dev": "tsc --watch",
     "build": "tsc",
-    "doc": "typedoc --out docs src --theme markdown"
+    "doc": "typedoc --out docs src"
   },
   "devDependencies": {
     "@types/jest": "^22.2.0",
     "@types/node": "^10.12.12",
     "jest": "^22.4.2",
     "typedoc": "^0.14.2",
-    "typedoc-plugin-markdown": "^1.1.26",
     "typescript": "^2.7.2"
   },
   "jest": {
@@ -22,7 +21,7 @@
     "collectCoverage": true,
     "collectCoverageFrom": [
       "dist/src/**/*.js",
-      "!**dist/src/interface/**"
+      "!**dist/src/interfaces/**"
     ],
     "verbose": true,
     "testURL": "http://localhost/"
@@ -40,5 +39,8 @@
   "bugs": {
     "url": "https://github.com/ao-framework/exceptions/issues"
   },
-  "homepage": "https://github.com/ao-framework/exceptions#readme"
+  "homepage": "https://github.com/ao-framework/exceptions#readme",
+  "dependencies": {
+    "@ao-framework/writer": "0.0.1"
+  }
 }
