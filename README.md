@@ -4,7 +4,7 @@
 </p>
 <p align="center"><em>Currently in early development. Breaking changes will occur frequently.</em></p>
 
-**Exceptions** is a library for managing custom exceptions. It contains functionality to tag additional information about context that ultimately led to an exception to be thrown in the first place. Errors in Javascript contains the “toString” method that usually contains the message, type and stack information from the Error. **Exceptions** contains two methods for viewing --“toString” and “toJson”. Both have their respected template methods to alter their view to the end user for a more detailed debugging experience.
+**Exceptions** is an abstract class for creating custom exceptions. It contains functionality to tag additional information about context that ultimately led to an exception to be thrown in the first place. Errors in Javascript contains the “toString” method that usually contains the message, type and stack information from the Error. **Exceptions** contains two methods for viewing --“toString” and “toJson”. Both have their respected template methods to alter their view to the end user for a more detailed debugging experience.
 
 Using custom exceptions is a controversial practice that is rife with arguments from well intended, opinionated and intelligent people. Understand the situation fully before use.
 
