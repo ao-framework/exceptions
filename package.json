@@ -2,7 +2,8 @@
   "name": "@ao-framework/exceptions",
   "version": "0.0.1",
   "description": "Exceptions is an abstract class for creating custom exceptions. It contains functionality to tag additional information about context that ultimately led to an exception to be thrown in the first place. Errors in Javascript contains the “toString” method that usually contains the message, type and stack information from the Error. Exceptions contains two methods for viewing --“toString” and “toJson”. Both have their respected template methods to alter their view to the end user for a more detailed debugging experience.",
-  "main": "index.js",
+  "main": "dist/src/index",
+  "types": "dist/src/index.d.ts",
   "scripts": {
     "test": "jest",
     "dev": "tsc --watch",
