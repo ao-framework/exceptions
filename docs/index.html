@@ -69,7 +69,7 @@
 					<b>Exceptions</b>
 				</p>
 				<p align="center"><em>Currently in early development. Breaking changes will occur frequently.</em></p>
-				<p><strong>Exceptions</strong> is a library for managing custom exceptions. It contains functionality to tag additional information about context that ultimately led to an exception to be thrown in the first place. Errors in Javascript contains the “toString” method that usually contains the message, type and stack information from the Error. <strong>Exceptions</strong> contains two methods for viewing --“toString” and “toJson”. Both have their respected template methods to alter their view to the end user for a more detailed debugging experience.</p>
+				<p><strong>Exceptions</strong> is an abstract class for creating custom exceptions. It contains functionality to tag additional information about context that ultimately led to an exception to be thrown in the first place. Errors in Javascript contains the “toString” method that usually contains the message, type and stack information from the Error. <strong>Exceptions</strong> contains two methods for viewing --“toString” and “toJson”. Both have their respected template methods to alter their view to the end user for a more detailed debugging experience.</p>
 				<p>Using custom exceptions is a controversial practice that is rife with arguments from well intended, opinionated and intelligent people. Understand the situation fully before use.</p>
 				<h4 id="import-the-library">Import the library</h4>
 				<pre><code class="language-ts"><span class="hljs-keyword">import</span> Exceptions <span class="hljs-keyword">from</span> <span class="hljs-string">"@ao-framework/exceptions"</span></code></pre>
@@ -96,10 +96,10 @@
 } <span class="hljs-keyword">catch</span>(err) {
     <span class="hljs-keyword">if</span>(err <span class="hljs-keyword">instanceof</span> BadInputException) {
         logger.errorSync(err.toJson())
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">throw</span> err
     }
-    <span class="hljs-keyword">throw</span> err
-}
-</code></pre>
+}</code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
