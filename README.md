@@ -40,8 +40,8 @@ try {
 } catch(err) {
     if(err instanceof BadInputException) {
         logger.errorSync(err.toJson())
+    } else {
+        throw err
     }
-    throw err
 }
-
 ```
