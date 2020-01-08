@@ -23,18 +23,18 @@ npm install --save @ao-framework/exceptions
 ```ts
 import { Exception } from "@ao-framework-exceptions"
 
-export class BadInputException extends Exception { }
+export class InvalidArgumentException extends Exception { }
 export class SystemException extends Exception { }
 ```
 
 ### How To Use?
 ```ts
-import { BadInputException } from "./myExceptions"
+import { InvalidArgumentException } from "./myExceptions"
 
 try {
-    throw new BadInputException("You did not send something you should have")
+    throw new InvalidArgumentException("You did not send something you should have")
 } catch(err => {
-    if(err instanceof BadInputException) {
+    if(err instanceof InvalidArgumentException) {
         // do something special
     } else {
         throw err;
@@ -46,15 +46,15 @@ try {
 
 ```ts
 import { throwWhenNotString, throwWhenNotObject } from "@ao-framework/gates"
-import { BadInputException } from "./myExceptions"
+import { InvalidArgumentException } from "./myExceptions"
 
 function validateArticle(request: iArticleRequest) {
     throwWhenNotObject(request, 
-        "Article data is corrupt", BadInputException)
+        "Article data is corrupt", InvalidArgumentException)
     throwWhenNotString(request.title, 
-        "Article should have a title", BadInputException)
+        "Article should have a title", InvalidArgumentException)
     throwWhenNotString(request.content, 
-        "Article should have content", BadInputException)
+        "Article should have content", InvalidArgumentException)
 }
 ```
 
