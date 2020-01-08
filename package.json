@@ -6,7 +6,10 @@
   "types": "dist/src/index.d.ts",
   "scripts": {
     "dev": "tsc --watch",
-    "test:dev": "ao-acumen dev"
+    "test": "ao-acumen main",
+    "test:dev": "ao-acumen dev",
+    "preversion": "npm test",
+    "postversion": "git push --tags"
   },
   "devDependencies": {
     "@ao-framework/acumen": "0.0.3",
