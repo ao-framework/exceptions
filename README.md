@@ -11,6 +11,8 @@
     </em>
 </p>
 
+Using custom exceptions is a practice both loved and hated. **ao-framework** does not take a stance, but rather wants to provide a way to practice cleanly.
+
 ### Installation
 ```bash
 npm install --save @ao-framework/exceptions
