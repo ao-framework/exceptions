@@ -5,14 +5,13 @@
   "main": "dist/src/index",
   "types": "dist/src/index.d.ts",
   "scripts": {
-    "test": "jest",
     "dev": "tsc --watch",
-    "build": "tsc",
-    "doc": "typedoc --out docs src && touch docs/.nojekyll"
+    "test:dev": "ao-acumen dev"
   },
   "devDependencies": {
+    "@ao-framework/acumen": "0.0.3",
     "@types/node": "^10.12.12",
-    "typescript": "^2.7.2"
+    "typescript": "^3.7.4"
   },
   "directories": {
     "test": "test"
@@ -21,10 +20,14 @@
     "type": "git",
     "url": "git+https://github.com/ao-framework/exceptions.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Josh Miller",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ao-framework/exceptions/issues"
   },
-  "homepage": "https://github.com/ao-framework/exceptions#readme"
+  "homepage": "https://github.com/ao-framework/exceptions#readme",
+  "dependencies": {
+    "@ao-framework/gates": "0.0.3",
+    "tslib": "^1.10.0"
+  }
 }
