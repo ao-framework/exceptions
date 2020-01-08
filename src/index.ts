@@ -1,8 +1,5 @@
-import Exception from "./exception"
-import ExceptionData from "./exception.data";
+import { Exception } from "./exception";
 
 export {
-    ExceptionData
+    Exception
 }
-
-export default Exception
